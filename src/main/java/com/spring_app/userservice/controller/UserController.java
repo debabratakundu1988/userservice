@@ -6,6 +6,7 @@ import com.spring_app.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -17,8 +18,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping
-    public Iterable<User> getAllUsers() {
+    @GetMapping("/getAllUsers")
+    public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
 

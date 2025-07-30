@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends CosmosRepository<User, String> {
-//    List<User> findByName(String name);
+    List<User> findByLastName(String lastName);
 }
